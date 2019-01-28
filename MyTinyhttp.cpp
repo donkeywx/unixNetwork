@@ -21,12 +21,23 @@ int main(int argc, char** argv)
     int serverSock = -1;
     unsigned short port = 0;
     
-
+    serverSock = startup(port);
 
     int clientSock = -1;
-    
     struct sockaddr_in clientName;
-    int clientNameLen = sizeof(clientName);
+    socklen_t clientNameLen = sizeof(clientName);
+
+    while(1)
+    {
+
+        // 失败返回-1
+        clientSock = accept(serverSock, (struct sockaddr*)&clientName, &clientNameLen);
+
+        if (-1 == clientSock)
+        {
+            error("failed to accept client socket");
+        }
+    }
     return 0;
 }
 void error(const char* sc)
@@ -72,6 +83,30 @@ int startup(unsigned short& port)
     {
         
         error("failed to bind!");
+    }
+
+    // 如果port为0，则自动分配一个端口
+    if (0 == port)
+    {
+        socklen_t nameLen = sizeof(serverName);
+
+        // 在调用bin函数后，getsockname返回内核分配的的本地端号
+        if (-1 == getsockname(serverSock, (struct sockaddr*)&serverName, &nameLen))
+        {
+
+            error("failed to get socke name ");
+        }
+
+        // linux 2.2 版本以后
+        // 使用两个队列分别存放：不完全连接请求和完全建立的连接请求
+        // 不完全连接的长度可以使用/proc/sys/net/ipv4/tcp_max_syn_backlog设置
+        // 完全连接请求就是第二个参数设置
+
+        if (listen(serverSock, 5) < 0)
+        {
+            
+            error("failed to listen");
+        }
     }
 }
 
