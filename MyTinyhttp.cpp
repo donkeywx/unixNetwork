@@ -6,16 +6,18 @@
     > tinyhttp
  ************************************************************************/
 
-#include<stdio.h>   // for perror
-#include<stdlib.h>  // for exit
-#include<iostream>
-#include<sys/socket.h>
-#include<netinet/in.h> // for sockaddr_in
-#include<string.h>  // for memset
+#include <stdio.h>   // for perror
+#include <stdlib.h>  // for exit
+#include <iostream>
+#include <sys/socket.h>
+#include <netinet/in.h> // for sockaddr_in
+#include <string.h>  // for memset
+#include <pthread.h>
 using namespace std;
 
 int startup(unsigned short&);   // 
 void error(const char *sc);     // 输出错误信息，并退出
+void* acceptRequest(void*);   // 处理请求 
 int main(int argc, char** argv)
 {
     int serverSock = -1;
@@ -36,6 +38,18 @@ int main(int argc, char** argv)
         if (-1 == clientSock)
         {
             error("failed to accept client socket");
+        }
+
+        // pthread_create(pthread_t* restrict tidp,指向线程标识符的指针
+        // const pthread_attr_t* restrict attr, 设置线程属性
+        // void* (*start_run)(void), 运行函数的起始地址
+        // void* restrict arg); 运行函数的参数
+        // 返回0
+        pthread_t newThread;
+        if (0 != pthread_create(&newThread, NULL, acceptRequest, &clientSock))
+        {
+            
+            error("failed to create thread");
         }
     }
     return 0;
@@ -108,5 +122,9 @@ int startup(unsigned short& port)
             error("failed to listen");
         }
     }
+}
+void* acceptRequest(void* clientSock)
+{
+
 }
 
