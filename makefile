@@ -3,3 +3,6 @@ MyTinyhttp: MyTinyhttp.cpp
 
 server: server.cpp
 	g++ -g server.cpp -o server
+
+client: client.cpp
+	g++ -g client.cpp -o client

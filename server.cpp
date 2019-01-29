@@ -45,6 +45,7 @@ int main()
         perror("failed to listen");
         exit(1);
     }
+    printf("start to listen\n");
 
     char buff[4096];
     int n = 0;
@@ -60,10 +61,11 @@ int main()
             perror("failed to accept client socket");
             exit(1);
         }
+        printf("received a connection from client\n");
 
         n = recv(clientFd, buff, sizeof(buff), 0);
         buff[n] = '\0';
-
+        printf("recv message from client: %s\n", buff);
             close(clientFd);
     }
 
