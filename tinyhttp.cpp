@@ -424,6 +424,7 @@ void cat(int client, FILE *resource)
     while (!feof(resource))
     {
         send(client, buf, strlen(buf), 0);
+        cout << buf << endl;
         fgets(buf, sizeof(buf), resource);
     }
 }
