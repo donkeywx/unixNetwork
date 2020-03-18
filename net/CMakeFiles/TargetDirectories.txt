@@ -1,0 +1,4 @@
+/home/wangk/code/cpp/unixNetwork/net/CMakeFiles/rebuild_cache.dir
+/home/wangk/code/cpp/unixNetwork/net/CMakeFiles/edit_cache.dir
+/home/wangk/code/cpp/unixNetwork/net/CMakeFiles/common.dir
+/home/wangk/code/cpp/unixNetwork/net/CMakeFiles/ttcp.dir

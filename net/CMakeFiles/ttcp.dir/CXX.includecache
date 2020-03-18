@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wangk/code/cpp/unixNetwork/net/ttcp/common.h
+iostream
+-
+errno.h
+-
+string
+-
+
+/home/wangk/code/cpp/unixNetwork/net/ttcp/main.cpp
+ttcp_blocking.h
+/home/wangk/code/cpp/unixNetwork/net/ttcp/ttcp_blocking.h
+
+/home/wangk/code/cpp/unixNetwork/net/ttcp/ttcp_blocking.h
+stdint.h
+-
+arpa/inet.h
+-
+common.h
+/home/wangk/code/cpp/unixNetwork/net/ttcp/common.h
+
