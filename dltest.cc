@@ -5,6 +5,7 @@
 // LD_PRELOAD，是个环境变量，用于动态库的加载，动态库加载的优先级最高，一般情况下，其加载顺序为
 // LD_PRELOAD>LD_LIBRARY_PATH>/etc/ld.so.cache>/lib>/usr/lib。
 // 自己编译的库的加载顺序优先于系统库
+// 因此使用动态连接库生成执行文件，可以不使用LD_PRELOAD环境变量LD_PRELOAD  
 int main()
 {
     // dlopen的测试代码, dlsym
