@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/tests/testLibgo.cpp
+iostream
+-
+libgo/coroutine.h
+-
+

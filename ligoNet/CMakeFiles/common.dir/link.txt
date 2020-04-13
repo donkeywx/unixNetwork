@@ -1,0 +1,1 @@
+/usr/bin/clang++ -fPIC  -O0 -g -fsanitize=address -std=c++11 -Wall -Wno-builtin-macro-redefined -Wno-deprecated -Werror -Wno-unused-function  -shared -Wl,-soname,libcommon.so -o lib/libcommon.so CMakeFiles/common.dir/net/socket.cpp.o CMakeFiles/common.dir/net/tcpConn.cpp.o CMakeFiles/common.dir/net/tcpServer.cpp.o  -L/usr/local/boost/lib 
