@@ -10,10 +10,10 @@ SET(LIB_SRC
     net/tcpServer.cpp
 )
 SET(LIB_LIB
-    common
-    boost_program_options
     libgo
     dl
+    common
+    boost_program_options
     pthread
 )
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
@@ -29,3 +29,8 @@ ADD_LIBRARY(common SHARED ${LIB_SRC})
 ADD_EXECUTABLE(testLibgo  tests/testLibgo.cpp)
 ADD_DEPENDENCIES(testLibgo common)
 TARGET_LINK_LIBRARIES(testLibgo ${LIB_LIB})
+
+
+ADD_EXECUTABLE(testSocket  tests/testSocket.cpp)
+ADD_DEPENDENCIES(testSocket common)
+TARGET_LINK_LIBRARIES(testSocket ${LIB_LIB})

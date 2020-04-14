@@ -42,6 +42,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/testSocket.dir/DependInfo.cmake"
   "CMakeFiles/common.dir/DependInfo.cmake"
   "CMakeFiles/testLibgo.dir/DependInfo.cmake"
   )

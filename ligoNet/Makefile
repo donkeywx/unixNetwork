@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named testSocket
+
+# Build rule for target.
+testSocket: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testSocket
+.PHONY : testSocket
+
+# fast build rule for target.
+testSocket/fast:
+	$(MAKE) -f CMakeFiles/testSocket.dir/build.make CMakeFiles/testSocket.dir/build
+.PHONY : testSocket/fast
+
+#=============================================================================
 # Target rules for targets named common
 
 # Build rule for target.
@@ -247,6 +260,33 @@ tests/testLibgo.cpp.s:
 	$(MAKE) -f CMakeFiles/testLibgo.dir/build.make CMakeFiles/testLibgo.dir/tests/testLibgo.cpp.s
 .PHONY : tests/testLibgo.cpp.s
 
+tests/testSocket.o: tests/testSocket.cpp.o
+
+.PHONY : tests/testSocket.o
+
+# target to build an object file
+tests/testSocket.cpp.o:
+	$(MAKE) -f CMakeFiles/testSocket.dir/build.make CMakeFiles/testSocket.dir/tests/testSocket.cpp.o
+.PHONY : tests/testSocket.cpp.o
+
+tests/testSocket.i: tests/testSocket.cpp.i
+
+.PHONY : tests/testSocket.i
+
+# target to preprocess a source file
+tests/testSocket.cpp.i:
+	$(MAKE) -f CMakeFiles/testSocket.dir/build.make CMakeFiles/testSocket.dir/tests/testSocket.cpp.i
+.PHONY : tests/testSocket.cpp.i
+
+tests/testSocket.s: tests/testSocket.cpp.s
+
+.PHONY : tests/testSocket.s
+
+# target to generate assembly for a file
+tests/testSocket.cpp.s:
+	$(MAKE) -f CMakeFiles/testSocket.dir/build.make CMakeFiles/testSocket.dir/tests/testSocket.cpp.s
+.PHONY : tests/testSocket.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -254,6 +294,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... testSocket"
 	@echo "... common"
 	@echo "... edit_cache"
 	@echo "... testLibgo"
@@ -269,6 +310,9 @@ help:
 	@echo "... tests/testLibgo.o"
 	@echo "... tests/testLibgo.i"
 	@echo "... tests/testLibgo.s"
+	@echo "... tests/testSocket.o"
+	@echo "... tests/testSocket.i"
+	@echo "... tests/testSocket.s"
 .PHONY : help
 
 

@@ -63,6 +63,43 @@ CMAKE_SOURCE_DIR = /home/wangk/code/cpp/unixNetwork/ligoNet
 CMAKE_BINARY_DIR = /home/wangk/code/cpp/unixNetwork/ligoNet
 
 #=============================================================================
+# Target rules for target CMakeFiles/testSocket.dir
+
+# All Build rule for target.
+CMakeFiles/testSocket.dir/all: CMakeFiles/common.dir/all
+	$(MAKE) -f CMakeFiles/testSocket.dir/build.make CMakeFiles/testSocket.dir/depend
+	$(MAKE) -f CMakeFiles/testSocket.dir/build.make CMakeFiles/testSocket.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles --progress-num=7,8 "Built target testSocket"
+.PHONY : CMakeFiles/testSocket.dir/all
+
+# Include target in all.
+all: CMakeFiles/testSocket.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/testSocket.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/testSocket.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles 0
+.PHONY : CMakeFiles/testSocket.dir/rule
+
+# Convenience name for target.
+testSocket: CMakeFiles/testSocket.dir/rule
+
+.PHONY : testSocket
+
+# clean rule for target.
+CMakeFiles/testSocket.dir/clean:
+	$(MAKE) -f CMakeFiles/testSocket.dir/build.make CMakeFiles/testSocket.dir/clean
+.PHONY : CMakeFiles/testSocket.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/testSocket.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/common.dir
 
 # All Build rule for target.

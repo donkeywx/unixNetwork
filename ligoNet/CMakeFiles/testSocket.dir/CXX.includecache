@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.h
+nonCopyable.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
+memory
+-
+libgo/netio/unix/hook.h
+-
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/tests/testSocket.cpp
+../net/socket.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.h
+libgo/libgo.h
+-
+libgo/netio/unix/hook.h
+-
+

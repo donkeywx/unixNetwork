@@ -1,0 +1,1 @@
+/usr/bin/clang++   -O0 -g -fsanitize=address -std=c++11 -Wall -Wno-builtin-macro-redefined -Wno-deprecated -Werror -Wno-unused-function  -rdynamic CMakeFiles/testSocket.dir/tests/testSocket.cpp.o  -o bin/testSocket  -L/usr/local/boost/lib -Wl,-rpath,/usr/local/boost/lib:/home/wangk/code/cpp/unixNetwork/ligoNet/lib -llibgo -ldl lib/libcommon.so -lboost_program_options -lpthread 
