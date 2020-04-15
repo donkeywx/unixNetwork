@@ -6,6 +6,38 @@
 
 #IncludeRegexTransform: 
 
+/home/wangk/code/cpp/unixNetwork/ligoNet/libgoNet.h
+net/socket.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.h
+net/tcpConn.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.h
+net/httpRequest.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpRequest.h
+net/httpResponse.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpResponse.h
+net/httpSession.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpSession.h
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpRequest.h
+nonCopyable.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
+memory
+-
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpResponse.h
+nonCopyable.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
+memory
+-
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpSession.h
+tcpConn.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.h
+httpRequest.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpRequest.h
+httpResponse.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpResponse.h
+
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
 
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.h
@@ -16,9 +48,13 @@ memory
 libgo/netio/unix/hook.h
 -
 
-/home/wangk/code/cpp/unixNetwork/ligoNet/tests/testSocket.cpp
-../net/socket.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.h
+socket.h
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.h
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/tests/testSocket.cpp
+../libgoNet.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/libgoNet.h
 libgo/libgo.h
 -
 libgo/netio/unix/hook.h

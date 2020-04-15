@@ -4,6 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpRequest.cpp" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/httpRequest.cpp.o"
+  "/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpResponse.cpp" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/httpResponse.cpp.o"
+  "/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpSession.cpp" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/httpSession.cpp.o"
   "/home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.cpp" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/socket.cpp.o"
   "/home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.cpp" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/tcpConn.cpp.o"
   "/home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpServer.cpp" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/tcpServer.cpp.o"

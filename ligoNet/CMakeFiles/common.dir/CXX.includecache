@@ -6,6 +6,38 @@
 
 #IncludeRegexTransform: 
 
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpRequest.cpp
+httpRequest.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpRequest.h
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpRequest.h
+nonCopyable.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
+memory
+-
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpResponse.cpp
+httpResponse.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpResponse.h
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpResponse.h
+nonCopyable.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
+memory
+-
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpSession.cpp
+httpSession.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpSession.h
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpSession.h
+tcpConn.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.h
+httpRequest.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpRequest.h
+httpResponse.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpResponse.h
+
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
 
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.cpp
@@ -29,6 +61,8 @@ tcpConn.h
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.h
 
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.h
+socket.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.h
 
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpServer.cpp
 tcpServer.h

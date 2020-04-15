@@ -152,6 +152,87 @@ testLibgo/fast:
 	$(MAKE) -f CMakeFiles/testLibgo.dir/build.make CMakeFiles/testLibgo.dir/build
 .PHONY : testLibgo/fast
 
+net/httpRequest.o: net/httpRequest.cpp.o
+
+.PHONY : net/httpRequest.o
+
+# target to build an object file
+net/httpRequest.cpp.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpRequest.cpp.o
+.PHONY : net/httpRequest.cpp.o
+
+net/httpRequest.i: net/httpRequest.cpp.i
+
+.PHONY : net/httpRequest.i
+
+# target to preprocess a source file
+net/httpRequest.cpp.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpRequest.cpp.i
+.PHONY : net/httpRequest.cpp.i
+
+net/httpRequest.s: net/httpRequest.cpp.s
+
+.PHONY : net/httpRequest.s
+
+# target to generate assembly for a file
+net/httpRequest.cpp.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpRequest.cpp.s
+.PHONY : net/httpRequest.cpp.s
+
+net/httpResponse.o: net/httpResponse.cpp.o
+
+.PHONY : net/httpResponse.o
+
+# target to build an object file
+net/httpResponse.cpp.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpResponse.cpp.o
+.PHONY : net/httpResponse.cpp.o
+
+net/httpResponse.i: net/httpResponse.cpp.i
+
+.PHONY : net/httpResponse.i
+
+# target to preprocess a source file
+net/httpResponse.cpp.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpResponse.cpp.i
+.PHONY : net/httpResponse.cpp.i
+
+net/httpResponse.s: net/httpResponse.cpp.s
+
+.PHONY : net/httpResponse.s
+
+# target to generate assembly for a file
+net/httpResponse.cpp.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpResponse.cpp.s
+.PHONY : net/httpResponse.cpp.s
+
+net/httpSession.o: net/httpSession.cpp.o
+
+.PHONY : net/httpSession.o
+
+# target to build an object file
+net/httpSession.cpp.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpSession.cpp.o
+.PHONY : net/httpSession.cpp.o
+
+net/httpSession.i: net/httpSession.cpp.i
+
+.PHONY : net/httpSession.i
+
+# target to preprocess a source file
+net/httpSession.cpp.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpSession.cpp.i
+.PHONY : net/httpSession.cpp.i
+
+net/httpSession.s: net/httpSession.cpp.s
+
+.PHONY : net/httpSession.s
+
+# target to generate assembly for a file
+net/httpSession.cpp.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpSession.cpp.s
+.PHONY : net/httpSession.cpp.s
+
 net/socket.o: net/socket.cpp.o
 
 .PHONY : net/socket.o
@@ -298,6 +379,15 @@ help:
 	@echo "... common"
 	@echo "... edit_cache"
 	@echo "... testLibgo"
+	@echo "... net/httpRequest.o"
+	@echo "... net/httpRequest.i"
+	@echo "... net/httpRequest.s"
+	@echo "... net/httpResponse.o"
+	@echo "... net/httpResponse.i"
+	@echo "... net/httpResponse.s"
+	@echo "... net/httpSession.o"
+	@echo "... net/httpSession.i"
+	@echo "... net/httpSession.s"
 	@echo "... net/socket.o"
 	@echo "... net/socket.i"
 	@echo "... net/socket.s"

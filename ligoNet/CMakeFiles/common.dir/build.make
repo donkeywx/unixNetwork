@@ -132,11 +132,86 @@ CMakeFiles/common.dir/net/tcpServer.cpp.o.provides: CMakeFiles/common.dir/net/tc
 CMakeFiles/common.dir/net/tcpServer.cpp.o.provides.build: CMakeFiles/common.dir/net/tcpServer.cpp.o
 
 
+CMakeFiles/common.dir/net/httpRequest.cpp.o: CMakeFiles/common.dir/flags.make
+CMakeFiles/common.dir/net/httpRequest.cpp.o: net/httpRequest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/common.dir/net/httpRequest.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/common.dir/net/httpRequest.cpp.o -c /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpRequest.cpp
+
+CMakeFiles/common.dir/net/httpRequest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/common.dir/net/httpRequest.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpRequest.cpp > CMakeFiles/common.dir/net/httpRequest.cpp.i
+
+CMakeFiles/common.dir/net/httpRequest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/common.dir/net/httpRequest.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpRequest.cpp -o CMakeFiles/common.dir/net/httpRequest.cpp.s
+
+CMakeFiles/common.dir/net/httpRequest.cpp.o.requires:
+
+.PHONY : CMakeFiles/common.dir/net/httpRequest.cpp.o.requires
+
+CMakeFiles/common.dir/net/httpRequest.cpp.o.provides: CMakeFiles/common.dir/net/httpRequest.cpp.o.requires
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpRequest.cpp.o.provides.build
+.PHONY : CMakeFiles/common.dir/net/httpRequest.cpp.o.provides
+
+CMakeFiles/common.dir/net/httpRequest.cpp.o.provides.build: CMakeFiles/common.dir/net/httpRequest.cpp.o
+
+
+CMakeFiles/common.dir/net/httpResponse.cpp.o: CMakeFiles/common.dir/flags.make
+CMakeFiles/common.dir/net/httpResponse.cpp.o: net/httpResponse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/common.dir/net/httpResponse.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/common.dir/net/httpResponse.cpp.o -c /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpResponse.cpp
+
+CMakeFiles/common.dir/net/httpResponse.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/common.dir/net/httpResponse.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpResponse.cpp > CMakeFiles/common.dir/net/httpResponse.cpp.i
+
+CMakeFiles/common.dir/net/httpResponse.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/common.dir/net/httpResponse.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpResponse.cpp -o CMakeFiles/common.dir/net/httpResponse.cpp.s
+
+CMakeFiles/common.dir/net/httpResponse.cpp.o.requires:
+
+.PHONY : CMakeFiles/common.dir/net/httpResponse.cpp.o.requires
+
+CMakeFiles/common.dir/net/httpResponse.cpp.o.provides: CMakeFiles/common.dir/net/httpResponse.cpp.o.requires
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpResponse.cpp.o.provides.build
+.PHONY : CMakeFiles/common.dir/net/httpResponse.cpp.o.provides
+
+CMakeFiles/common.dir/net/httpResponse.cpp.o.provides.build: CMakeFiles/common.dir/net/httpResponse.cpp.o
+
+
+CMakeFiles/common.dir/net/httpSession.cpp.o: CMakeFiles/common.dir/flags.make
+CMakeFiles/common.dir/net/httpSession.cpp.o: net/httpSession.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/common.dir/net/httpSession.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/common.dir/net/httpSession.cpp.o -c /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpSession.cpp
+
+CMakeFiles/common.dir/net/httpSession.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/common.dir/net/httpSession.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpSession.cpp > CMakeFiles/common.dir/net/httpSession.cpp.i
+
+CMakeFiles/common.dir/net/httpSession.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/common.dir/net/httpSession.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpSession.cpp -o CMakeFiles/common.dir/net/httpSession.cpp.s
+
+CMakeFiles/common.dir/net/httpSession.cpp.o.requires:
+
+.PHONY : CMakeFiles/common.dir/net/httpSession.cpp.o.requires
+
+CMakeFiles/common.dir/net/httpSession.cpp.o.provides: CMakeFiles/common.dir/net/httpSession.cpp.o.requires
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpSession.cpp.o.provides.build
+.PHONY : CMakeFiles/common.dir/net/httpSession.cpp.o.provides
+
+CMakeFiles/common.dir/net/httpSession.cpp.o.provides.build: CMakeFiles/common.dir/net/httpSession.cpp.o
+
+
 # Object files for target common
 common_OBJECTS = \
 "CMakeFiles/common.dir/net/socket.cpp.o" \
 "CMakeFiles/common.dir/net/tcpConn.cpp.o" \
-"CMakeFiles/common.dir/net/tcpServer.cpp.o"
+"CMakeFiles/common.dir/net/tcpServer.cpp.o" \
+"CMakeFiles/common.dir/net/httpRequest.cpp.o" \
+"CMakeFiles/common.dir/net/httpResponse.cpp.o" \
+"CMakeFiles/common.dir/net/httpSession.cpp.o"
 
 # External object files for target common
 common_EXTERNAL_OBJECTS =
@@ -144,9 +219,12 @@ common_EXTERNAL_OBJECTS =
 lib/libcommon.so: CMakeFiles/common.dir/net/socket.cpp.o
 lib/libcommon.so: CMakeFiles/common.dir/net/tcpConn.cpp.o
 lib/libcommon.so: CMakeFiles/common.dir/net/tcpServer.cpp.o
+lib/libcommon.so: CMakeFiles/common.dir/net/httpRequest.cpp.o
+lib/libcommon.so: CMakeFiles/common.dir/net/httpResponse.cpp.o
+lib/libcommon.so: CMakeFiles/common.dir/net/httpSession.cpp.o
 lib/libcommon.so: CMakeFiles/common.dir/build.make
 lib/libcommon.so: CMakeFiles/common.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library lib/libcommon.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library lib/libcommon.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/common.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -157,6 +235,9 @@ CMakeFiles/common.dir/build: lib/libcommon.so
 CMakeFiles/common.dir/requires: CMakeFiles/common.dir/net/socket.cpp.o.requires
 CMakeFiles/common.dir/requires: CMakeFiles/common.dir/net/tcpConn.cpp.o.requires
 CMakeFiles/common.dir/requires: CMakeFiles/common.dir/net/tcpServer.cpp.o.requires
+CMakeFiles/common.dir/requires: CMakeFiles/common.dir/net/httpRequest.cpp.o.requires
+CMakeFiles/common.dir/requires: CMakeFiles/common.dir/net/httpResponse.cpp.o.requires
+CMakeFiles/common.dir/requires: CMakeFiles/common.dir/net/httpSession.cpp.o.requires
 
 .PHONY : CMakeFiles/common.dir/requires
 

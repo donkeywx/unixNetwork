@@ -8,6 +8,9 @@ SET(LIB_SRC
     net/socket.cpp
     net/tcpConn.cpp
     net/tcpServer.cpp
+    net/httpRequest.cpp
+    net/httpResponse.cpp
+    net/httpSession.cpp
 )
 SET(LIB_LIB
     libgo

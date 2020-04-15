@@ -2,6 +2,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/common.dir/net/socket.cpp.o"
   "CMakeFiles/common.dir/net/tcpConn.cpp.o"
   "CMakeFiles/common.dir/net/tcpServer.cpp.o"
+  "CMakeFiles/common.dir/net/httpRequest.cpp.o"
+  "CMakeFiles/common.dir/net/httpResponse.cpp.o"
+  "CMakeFiles/common.dir/net/httpSession.cpp.o"
   "lib/libcommon.pdb"
   "lib/libcommon.so"
 )

@@ -1,4 +1,4 @@
-#include "../net/socket.h"
+#include "../libgoNet.h"
 #include <libgo/libgo.h>
 #include <libgo/netio/unix/hook.h>
 int main()
