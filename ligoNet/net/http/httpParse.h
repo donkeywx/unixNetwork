@@ -77,10 +77,7 @@ private:
     http_parser m_parser;
     /// HttpRequest结构
     HttpRequest::Ptr m_httpRequest;
-    /// 错误码
-    /// 1000: invalid method
-    /// 1001: invalid version
-    /// 1002: invalid field
+    // 
     int m_error;
 };
 

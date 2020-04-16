@@ -61,8 +61,6 @@ enum class HttpMethod
     INVALID_METHOD
 };
 
-
-
 class HttpRequest: public Noncopyable, public std::enable_shared_from_this<HttpRequest>
 {
 public:

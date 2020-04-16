@@ -1,4 +1,6 @@
-#include  "httpParse.h"
+#include "httpParse.h"
+#include <boost/lexical_cast.hpp>
+
 
 namespace donkey
 {
@@ -26,7 +28,7 @@ void on_request_method(void *data, const char *at, size_t length)
 
     if(m == HttpMethod::INVALID_METHOD)
     {
-        parser->setError(1000);
+        parser->setError(HTTP_PARSE_REQUEST_ERRORCODE::INVALID_REQ_METHOD);
         return;
     }
     parser->getHttpRequest()->setMethod(m);
@@ -58,12 +60,17 @@ void on_request_version(void *data, const char *at, size_t length)
 {
     HttpRequestParser* parser = static_cast<HttpRequestParser*>(data);
     uint8_t v = 0;
-    if(strncmp(at, "HTTP/1.1", length) == 0) {
-        v = 0x11;
-    } else if(strncmp(at, "HTTP/1.0", length) == 0) {
-        v = 0x10;
-    } else {
-        parser->setError(1001);
+    if(strncmp(at, "HTTP/1.1", length) == 0)
+    {
+        v = HTTP_VERSION::HTTP_11;
+    } 
+    else if(strncmp(at, "HTTP/1.0", length) == 0)
+    {
+        v = HTTP_VERSION::HTTP_10;
+    }
+    else 
+    {
+        parser->setError(HTTP_PARSE_REQUEST_ERRORCODE::INVALID_REQ_VERSION);
         return;
     }
     parser->getHttpRequest()->setVersion(v);
@@ -71,23 +78,24 @@ void on_request_version(void *data, const char *at, size_t length)
 
 void on_request_header_done(void *data, const char *at, size_t length)
 {
-    //HttpRequestParser* parser = static_cast<HttpRequestParser*>(data);
 }
 
 void on_request_http_field(void *data, const char *field, size_t flen
-                           ,const char *value, size_t vlen) {
+                           ,const char *value, size_t vlen)
+{
     HttpRequestParser* parser = static_cast<HttpRequestParser*>(data);
-    if(flen == 0) {
-        //parser->setError(1002);
+    if(0 == flen)
+    {
+        parser->setError(HTTP_PARSE_REQUEST_ERRORCODE::INVALID_REQ_FIELD);
         return;
     }
     parser->getHttpRequest()->setHeader(std::string(field, flen)
-                                ,std::string(value, vlen));
+                                , std::string(value, vlen));
 }
 
 
 HttpRequestParser::HttpRequestParser()
-    : m_error(0)
+    : m_error(HTTP_PARSE_REQUEST_ERRORCODE::NO_REQ_ERROR)
 {
     m_httpRequest.reset(new HttpRequest);
     http_parser_init(&m_parser);
@@ -126,10 +134,14 @@ int HttpRequestParser::hasError()
 
 uint64_t HttpRequestParser::getContentLength()
 {
+    std::string len = m_httpRequest->getHeader("content-length");
+    try {
+        return boost::lexical_cast<uint64_t>(len);
+    } catch (...) {
+    }
     // return m_data->getHeaderAs<uint64_t>("content-length", 0);
     return 0;
 }
-
 
 uint64_t HttpRequestParser::GetHttpRequestBufferSize()
 {
@@ -142,50 +154,60 @@ uint64_t HttpRequestParser::GetHttpRequestMaxBodySize()
 }
 
 
-
-
-void on_response_reason(void *data, const char *at, size_t length) {
+/********************************RESPONSE*************************************/
+void on_response_reason(void *data, const char *at, size_t length)
+{
     HttpResponseParser* parser = static_cast<HttpResponseParser*>(data);
     parser->getHttpReponse()->setReason(std::string(at, length));
 }
 
-void on_response_status(void *data, const char *at, size_t length) {
+void on_response_status(void *data, const char *at, size_t length)
+{
     HttpResponseParser* parser = static_cast<HttpResponseParser*>(data);
     HttpStatus status = (HttpStatus)(atoi(at));
     parser->getHttpReponse()->setStatus(status);
 }
 
-void on_response_chunk(void *data, const char *at, size_t length) {
+void on_response_chunk(void *data, const char *at, size_t length)
+{
 }
 
-void on_response_version(void *data, const char *at, size_t length) {
+void on_response_version(void *data, const char *at, size_t length)
+{
     HttpResponseParser* parser = static_cast<HttpResponseParser*>(data);
     uint8_t v = 0;
-    if(strncmp(at, "HTTP/1.1", length) == 0) {
-        v = 0x11;
-    } else if(strncmp(at, "HTTP/1.0", length) == 0) {
-        v = 0x10;
-    } else {
-
-        parser->setError(1001);
+    if(0 == strncmp(at, "HTTP/1.1", length))
+    {
+        v = HTTP_VERSION::HTTP_11;
+    }
+    else if(0 == strncmp(at, "HTTP/1.0", length))
+    {
+        v = HTTP_VERSION::HTTP_10;
+    }
+    else
+    {
+        parser->setError(HTTP_PARSE_RESPONSE_ERRORCODE::INVALID_RES_VERSION);
         return;
     }
 
     parser->getHttpReponse()->setVersion(v);
 }
 
-void on_response_header_done(void *data, const char *at, size_t length) {
+void on_response_header_done(void *data, const char *at, size_t length)
+{
 }
 
-void on_response_last_chunk(void *data, const char *at, size_t length) {
+void on_response_last_chunk(void *data, const char *at, size_t length)
+{
 }
 
 void on_response_http_field(void *data, const char *field, size_t flen
-                           ,const char *value, size_t vlen) {
+                           ,const char *value, size_t vlen)
+{
     HttpResponseParser* parser = static_cast<HttpResponseParser*>(data);
-    if(flen == 0) {
-
-        //parser->setError(1002);
+    if(0 == flen)
+    {
+        parser->setError(HTTP_PARSE_RESPONSE_ERRORCODE::INVALID_RES_FIELD);
         return;
     }
     parser->getHttpReponse()->setHeader(std::string(field, flen)
@@ -193,7 +215,7 @@ void on_response_http_field(void *data, const char *field, size_t flen
 }
 
 HttpResponseParser::HttpResponseParser()
-    : m_error(0)
+    : m_error(HTTP_PARSE_RESPONSE_ERRORCODE::NO_RES_ERROR)
 {
     m_httpReponse.reset(new HttpResponse);
     httpclient_parser_init(&m_parser);
@@ -234,6 +256,11 @@ int HttpResponseParser::hasError()
 
 uint64_t HttpResponseParser::getContentLength()
 {
+    std::string len = m_httpReponse->getHeader("content-length");
+    try {
+        return boost::lexical_cast<uint64_t>(len);
+    } catch (...) {
+    }
     // return m_data->getHeaderAs<uint64_t>("content-length", 0);
     return 0;
 }
