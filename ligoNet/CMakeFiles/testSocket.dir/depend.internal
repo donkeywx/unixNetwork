@@ -3,8 +3,9 @@
 
 CMakeFiles/testSocket.dir/tests/testSocket.cpp.o
  /home/wangk/code/cpp/unixNetwork/ligoNet/libgoNet.h
- /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpRequest.h
- /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpResponse.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpCommon.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpRequest.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpResponse.h
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpSession.h
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.h

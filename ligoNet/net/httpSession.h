@@ -2,8 +2,8 @@
 #define __DONKEY_HTTP_SESSION_H__
 
 #include "tcpConn.h"
-#include "httpRequest.h"
-#include "httpResponse.h"
+#include "http/httpRequest.h"
+#include "http/httpResponse.h"
 
 namespace donkey
 {
@@ -14,7 +14,7 @@ public:
     ~HttpSession();
 
     HttpRequest::Ptr recvRequest();
-    int sendReponse(HttpReponse::Ptr);
+    int sendReponse(HttpResponse::Ptr);
 private:
 
 };

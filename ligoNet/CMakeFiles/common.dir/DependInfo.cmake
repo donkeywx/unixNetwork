@@ -4,8 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpRequest.cpp" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/httpRequest.cpp.o"
-  "/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpResponse.cpp" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/httpResponse.cpp.o"
+  "/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/http11_parser.cc" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/http/http11_parser.cc.o"
+  "/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpParse.cpp" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/http/httpParse.cpp.o"
+  "/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpRequest.cpp" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/http/httpRequest.cpp.o"
+  "/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpResponse.cpp" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/http/httpResponse.cpp.o"
+  "/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpclient_parser.cc" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/http/httpclient_parser.cc.o"
   "/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpSession.cpp" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/httpSession.cpp.o"
   "/home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.cpp" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/socket.cpp.o"
   "/home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.cpp" "/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles/common.dir/net/tcpConn.cpp.o"

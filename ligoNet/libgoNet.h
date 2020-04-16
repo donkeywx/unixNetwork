@@ -3,8 +3,8 @@
 
 #include "net/socket.h"
 #include "net/tcpConn.h"
-#include "net/httpRequest.h"
-#include "net/httpResponse.h"
+#include "net/http/httpRequest.h"
+#include "net/http/httpResponse.h"
 #include "net/httpSession.h"
 
 #endif

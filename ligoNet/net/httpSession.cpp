@@ -19,7 +19,7 @@ HttpRequest::Ptr HttpSession::recvRequest()
     return httpRequest;
 }
 
-int HttpSession::sendReponse(HttpReponse::Ptr)
+int HttpSession::sendReponse(HttpResponse::Ptr)
 {
     return 0;
 }

@@ -152,59 +152,140 @@ testLibgo/fast:
 	$(MAKE) -f CMakeFiles/testLibgo.dir/build.make CMakeFiles/testLibgo.dir/build
 .PHONY : testLibgo/fast
 
-net/httpRequest.o: net/httpRequest.cpp.o
+net/http/http11_parser.o: net/http/http11_parser.cc.o
 
-.PHONY : net/httpRequest.o
-
-# target to build an object file
-net/httpRequest.cpp.o:
-	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpRequest.cpp.o
-.PHONY : net/httpRequest.cpp.o
-
-net/httpRequest.i: net/httpRequest.cpp.i
-
-.PHONY : net/httpRequest.i
-
-# target to preprocess a source file
-net/httpRequest.cpp.i:
-	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpRequest.cpp.i
-.PHONY : net/httpRequest.cpp.i
-
-net/httpRequest.s: net/httpRequest.cpp.s
-
-.PHONY : net/httpRequest.s
-
-# target to generate assembly for a file
-net/httpRequest.cpp.s:
-	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpRequest.cpp.s
-.PHONY : net/httpRequest.cpp.s
-
-net/httpResponse.o: net/httpResponse.cpp.o
-
-.PHONY : net/httpResponse.o
+.PHONY : net/http/http11_parser.o
 
 # target to build an object file
-net/httpResponse.cpp.o:
-	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpResponse.cpp.o
-.PHONY : net/httpResponse.cpp.o
+net/http/http11_parser.cc.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/http11_parser.cc.o
+.PHONY : net/http/http11_parser.cc.o
 
-net/httpResponse.i: net/httpResponse.cpp.i
+net/http/http11_parser.i: net/http/http11_parser.cc.i
 
-.PHONY : net/httpResponse.i
+.PHONY : net/http/http11_parser.i
 
 # target to preprocess a source file
-net/httpResponse.cpp.i:
-	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpResponse.cpp.i
-.PHONY : net/httpResponse.cpp.i
+net/http/http11_parser.cc.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/http11_parser.cc.i
+.PHONY : net/http/http11_parser.cc.i
 
-net/httpResponse.s: net/httpResponse.cpp.s
+net/http/http11_parser.s: net/http/http11_parser.cc.s
 
-.PHONY : net/httpResponse.s
+.PHONY : net/http/http11_parser.s
 
 # target to generate assembly for a file
-net/httpResponse.cpp.s:
-	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpResponse.cpp.s
-.PHONY : net/httpResponse.cpp.s
+net/http/http11_parser.cc.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/http11_parser.cc.s
+.PHONY : net/http/http11_parser.cc.s
+
+net/http/httpParse.o: net/http/httpParse.cpp.o
+
+.PHONY : net/http/httpParse.o
+
+# target to build an object file
+net/http/httpParse.cpp.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpParse.cpp.o
+.PHONY : net/http/httpParse.cpp.o
+
+net/http/httpParse.i: net/http/httpParse.cpp.i
+
+.PHONY : net/http/httpParse.i
+
+# target to preprocess a source file
+net/http/httpParse.cpp.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpParse.cpp.i
+.PHONY : net/http/httpParse.cpp.i
+
+net/http/httpParse.s: net/http/httpParse.cpp.s
+
+.PHONY : net/http/httpParse.s
+
+# target to generate assembly for a file
+net/http/httpParse.cpp.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpParse.cpp.s
+.PHONY : net/http/httpParse.cpp.s
+
+net/http/httpRequest.o: net/http/httpRequest.cpp.o
+
+.PHONY : net/http/httpRequest.o
+
+# target to build an object file
+net/http/httpRequest.cpp.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpRequest.cpp.o
+.PHONY : net/http/httpRequest.cpp.o
+
+net/http/httpRequest.i: net/http/httpRequest.cpp.i
+
+.PHONY : net/http/httpRequest.i
+
+# target to preprocess a source file
+net/http/httpRequest.cpp.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpRequest.cpp.i
+.PHONY : net/http/httpRequest.cpp.i
+
+net/http/httpRequest.s: net/http/httpRequest.cpp.s
+
+.PHONY : net/http/httpRequest.s
+
+# target to generate assembly for a file
+net/http/httpRequest.cpp.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpRequest.cpp.s
+.PHONY : net/http/httpRequest.cpp.s
+
+net/http/httpResponse.o: net/http/httpResponse.cpp.o
+
+.PHONY : net/http/httpResponse.o
+
+# target to build an object file
+net/http/httpResponse.cpp.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpResponse.cpp.o
+.PHONY : net/http/httpResponse.cpp.o
+
+net/http/httpResponse.i: net/http/httpResponse.cpp.i
+
+.PHONY : net/http/httpResponse.i
+
+# target to preprocess a source file
+net/http/httpResponse.cpp.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpResponse.cpp.i
+.PHONY : net/http/httpResponse.cpp.i
+
+net/http/httpResponse.s: net/http/httpResponse.cpp.s
+
+.PHONY : net/http/httpResponse.s
+
+# target to generate assembly for a file
+net/http/httpResponse.cpp.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpResponse.cpp.s
+.PHONY : net/http/httpResponse.cpp.s
+
+net/http/httpclient_parser.o: net/http/httpclient_parser.cc.o
+
+.PHONY : net/http/httpclient_parser.o
+
+# target to build an object file
+net/http/httpclient_parser.cc.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpclient_parser.cc.o
+.PHONY : net/http/httpclient_parser.cc.o
+
+net/http/httpclient_parser.i: net/http/httpclient_parser.cc.i
+
+.PHONY : net/http/httpclient_parser.i
+
+# target to preprocess a source file
+net/http/httpclient_parser.cc.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpclient_parser.cc.i
+.PHONY : net/http/httpclient_parser.cc.i
+
+net/http/httpclient_parser.s: net/http/httpclient_parser.cc.s
+
+.PHONY : net/http/httpclient_parser.s
+
+# target to generate assembly for a file
+net/http/httpclient_parser.cc.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpclient_parser.cc.s
+.PHONY : net/http/httpclient_parser.cc.s
 
 net/httpSession.o: net/httpSession.cpp.o
 
@@ -379,12 +460,21 @@ help:
 	@echo "... common"
 	@echo "... edit_cache"
 	@echo "... testLibgo"
-	@echo "... net/httpRequest.o"
-	@echo "... net/httpRequest.i"
-	@echo "... net/httpRequest.s"
-	@echo "... net/httpResponse.o"
-	@echo "... net/httpResponse.i"
-	@echo "... net/httpResponse.s"
+	@echo "... net/http/http11_parser.o"
+	@echo "... net/http/http11_parser.i"
+	@echo "... net/http/http11_parser.s"
+	@echo "... net/http/httpParse.o"
+	@echo "... net/http/httpParse.i"
+	@echo "... net/http/httpParse.s"
+	@echo "... net/http/httpRequest.o"
+	@echo "... net/http/httpRequest.i"
+	@echo "... net/http/httpRequest.s"
+	@echo "... net/http/httpResponse.o"
+	@echo "... net/http/httpResponse.i"
+	@echo "... net/http/httpResponse.s"
+	@echo "... net/http/httpclient_parser.o"
+	@echo "... net/http/httpclient_parser.i"
+	@echo "... net/http/httpclient_parser.s"
 	@echo "... net/httpSession.o"
 	@echo "... net/httpSession.i"
 	@echo "... net/httpSession.s"

@@ -8,8 +8,12 @@ SET(LIB_SRC
     net/socket.cpp
     net/tcpConn.cpp
     net/tcpServer.cpp
-    net/httpRequest.cpp
-    net/httpResponse.cpp
+
+    net/http/http11_parser.cc
+    net/http/httpclient_parser.cc
+    net/http/httpRequest.cpp
+    net/http/httpResponse.cpp
+    net/http/httpParse.cpp
     net/httpSession.cpp
 )
 SET(LIB_LIB
