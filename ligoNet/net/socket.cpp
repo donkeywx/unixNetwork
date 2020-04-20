@@ -69,9 +69,9 @@ int Socket::bind(const struct sockaddr_in *addr)
     return ::bind(m_sock, (const struct sockaddr*)addr, sizeof(sockaddr));
 }
 
-Socket::Ptr Socket::accept(struct sockaddr *addr, socklen_t *addrlen)
+Socket::Ptr Socket::accept()
 {
-    int acceptedSock = ::accept(m_sock, addr, addrlen);
+    int acceptedSock = ::accept(m_sock, nullptr, nullptr);
     return createAcceptedSocket(acceptedSock, m_domain,
         this->m_type, this->m_protocol);
 }

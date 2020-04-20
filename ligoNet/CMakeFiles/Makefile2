@@ -63,39 +63,76 @@ CMAKE_SOURCE_DIR = /home/wangk/code/cpp/unixNetwork/ligoNet
 CMAKE_BINARY_DIR = /home/wangk/code/cpp/unixNetwork/ligoNet
 
 #=============================================================================
-# Target rules for target CMakeFiles/testSocket.dir
+# Target rules for target CMakeFiles/testHttpServer.dir
 
 # All Build rule for target.
-CMakeFiles/testSocket.dir/all: CMakeFiles/common.dir/all
-	$(MAKE) -f CMakeFiles/testSocket.dir/build.make CMakeFiles/testSocket.dir/depend
-	$(MAKE) -f CMakeFiles/testSocket.dir/build.make CMakeFiles/testSocket.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles --progress-num=13,14 "Built target testSocket"
-.PHONY : CMakeFiles/testSocket.dir/all
+CMakeFiles/testHttpServer.dir/all: CMakeFiles/common.dir/all
+	$(MAKE) -f CMakeFiles/testHttpServer.dir/build.make CMakeFiles/testHttpServer.dir/depend
+	$(MAKE) -f CMakeFiles/testHttpServer.dir/build.make CMakeFiles/testHttpServer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles --progress-num=13,14 "Built target testHttpServer"
+.PHONY : CMakeFiles/testHttpServer.dir/all
 
 # Include target in all.
-all: CMakeFiles/testSocket.dir/all
+all: CMakeFiles/testHttpServer.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/testSocket.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles 12
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/testSocket.dir/all
+CMakeFiles/testHttpServer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles 14
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/testHttpServer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles 0
-.PHONY : CMakeFiles/testSocket.dir/rule
+.PHONY : CMakeFiles/testHttpServer.dir/rule
 
 # Convenience name for target.
-testSocket: CMakeFiles/testSocket.dir/rule
+testHttpServer: CMakeFiles/testHttpServer.dir/rule
 
-.PHONY : testSocket
-
-# clean rule for target.
-CMakeFiles/testSocket.dir/clean:
-	$(MAKE) -f CMakeFiles/testSocket.dir/build.make CMakeFiles/testSocket.dir/clean
-.PHONY : CMakeFiles/testSocket.dir/clean
+.PHONY : testHttpServer
 
 # clean rule for target.
-clean: CMakeFiles/testSocket.dir/clean
+CMakeFiles/testHttpServer.dir/clean:
+	$(MAKE) -f CMakeFiles/testHttpServer.dir/build.make CMakeFiles/testHttpServer.dir/clean
+.PHONY : CMakeFiles/testHttpServer.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/testHttpServer.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/testTcpServer.dir
+
+# All Build rule for target.
+CMakeFiles/testTcpServer.dir/all: CMakeFiles/common.dir/all
+	$(MAKE) -f CMakeFiles/testTcpServer.dir/build.make CMakeFiles/testTcpServer.dir/depend
+	$(MAKE) -f CMakeFiles/testTcpServer.dir/build.make CMakeFiles/testTcpServer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles --progress-num=17,18 "Built target testTcpServer"
+.PHONY : CMakeFiles/testTcpServer.dir/all
+
+# Include target in all.
+all: CMakeFiles/testTcpServer.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/testTcpServer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles 14
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/testTcpServer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles 0
+.PHONY : CMakeFiles/testTcpServer.dir/rule
+
+# Convenience name for target.
+testTcpServer: CMakeFiles/testTcpServer.dir/rule
+
+.PHONY : testTcpServer
+
+# clean rule for target.
+CMakeFiles/testTcpServer.dir/clean:
+	$(MAKE) -f CMakeFiles/testTcpServer.dir/build.make CMakeFiles/testTcpServer.dir/clean
+.PHONY : CMakeFiles/testTcpServer.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/testTcpServer.dir/clean
 
 .PHONY : clean
 
@@ -106,7 +143,7 @@ clean: CMakeFiles/testSocket.dir/clean
 CMakeFiles/common.dir/all:
 	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/depend
 	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target common"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target common"
 .PHONY : CMakeFiles/common.dir/all
 
 # Include target in all.
@@ -116,7 +153,7 @@ all: CMakeFiles/common.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/common.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/common.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles 0
 .PHONY : CMakeFiles/common.dir/rule
@@ -143,7 +180,7 @@ clean: CMakeFiles/common.dir/clean
 CMakeFiles/testLibgo.dir/all: CMakeFiles/common.dir/all
 	$(MAKE) -f CMakeFiles/testLibgo.dir/build.make CMakeFiles/testLibgo.dir/depend
 	$(MAKE) -f CMakeFiles/testLibgo.dir/build.make CMakeFiles/testLibgo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles --progress-num=11,12 "Built target testLibgo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles --progress-num=15,16 "Built target testLibgo"
 .PHONY : CMakeFiles/testLibgo.dir/all
 
 # Include target in all.
@@ -153,7 +190,7 @@ all: CMakeFiles/testLibgo.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/testLibgo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/testLibgo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangk/code/cpp/unixNetwork/ligoNet/CMakeFiles 0
 .PHONY : CMakeFiles/testLibgo.dir/rule

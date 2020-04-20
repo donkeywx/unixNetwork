@@ -35,7 +35,7 @@ public:
     ~Socket();
 
     int listen(const char* serverIp, uint16_t serverPort, int backlog = 10);
-    Socket::Ptr accept(struct sockaddr *addr, socklen_t *addrlen);
+    Socket::Ptr accept();
     int connect(const char* remoteIp, uint16_t remotePort);
     int send(const void *buf, size_t len, int flags);
     int recv(void *buf, size_t len, int flags);

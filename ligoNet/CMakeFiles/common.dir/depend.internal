@@ -638,19 +638,53 @@ CMakeFiles/common.dir/net/http/httpResponse.cpp.o
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpResponse.cpp
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpResponse.h
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
+CMakeFiles/common.dir/net/http/httpSession.cpp.o
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/http11_common.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/http11_parser.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpCommon.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpParse.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpRequest.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpResponse.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpSession.cpp
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpSession.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpclient_parser.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.h
 CMakeFiles/common.dir/net/http/httpclient_parser.cc.o
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/http11_common.h
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpclient_parser.cc
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpclient_parser.h
-CMakeFiles/common.dir/net/httpSession.cpp.o
+CMakeFiles/common.dir/net/http/servlet.cpp.o
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/http11_common.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/http11_parser.h
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpCommon.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpParse.h
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpRequest.h
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpResponse.h
- /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpSession.cpp
- /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpSession.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpSession.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpclient_parser.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/servlet.cpp
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/servlet.h
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.h
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.h
+CMakeFiles/common.dir/net/httpServer.cpp.o
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/http11_common.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/http11_parser.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpCommon.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpParse.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpRequest.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpResponse.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpSession.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpclient_parser.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/servlet.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpServer.cpp
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/httpServer.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpServer.h
 CMakeFiles/common.dir/net/socket.cpp.o
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.cpp
@@ -661,5 +695,8 @@ CMakeFiles/common.dir/net/tcpConn.cpp.o
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.cpp
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.h
 CMakeFiles/common.dir/net/tcpServer.cpp.o
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.h
+ /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.h
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpServer.cpp
  /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpServer.h

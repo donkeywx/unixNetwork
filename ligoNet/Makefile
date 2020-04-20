@@ -114,17 +114,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named testSocket
+# Target rules for targets named testHttpServer
 
 # Build rule for target.
-testSocket: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 testSocket
-.PHONY : testSocket
+testHttpServer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testHttpServer
+.PHONY : testHttpServer
 
 # fast build rule for target.
-testSocket/fast:
-	$(MAKE) -f CMakeFiles/testSocket.dir/build.make CMakeFiles/testSocket.dir/build
-.PHONY : testSocket/fast
+testHttpServer/fast:
+	$(MAKE) -f CMakeFiles/testHttpServer.dir/build.make CMakeFiles/testHttpServer.dir/build
+.PHONY : testHttpServer/fast
+
+#=============================================================================
+# Target rules for targets named testTcpServer
+
+# Build rule for target.
+testTcpServer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testTcpServer
+.PHONY : testTcpServer
+
+# fast build rule for target.
+testTcpServer/fast:
+	$(MAKE) -f CMakeFiles/testTcpServer.dir/build.make CMakeFiles/testTcpServer.dir/build
+.PHONY : testTcpServer/fast
 
 #=============================================================================
 # Target rules for targets named common
@@ -260,6 +273,33 @@ net/http/httpResponse.cpp.s:
 	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpResponse.cpp.s
 .PHONY : net/http/httpResponse.cpp.s
 
+net/http/httpSession.o: net/http/httpSession.cpp.o
+
+.PHONY : net/http/httpSession.o
+
+# target to build an object file
+net/http/httpSession.cpp.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpSession.cpp.o
+.PHONY : net/http/httpSession.cpp.o
+
+net/http/httpSession.i: net/http/httpSession.cpp.i
+
+.PHONY : net/http/httpSession.i
+
+# target to preprocess a source file
+net/http/httpSession.cpp.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpSession.cpp.i
+.PHONY : net/http/httpSession.cpp.i
+
+net/http/httpSession.s: net/http/httpSession.cpp.s
+
+.PHONY : net/http/httpSession.s
+
+# target to generate assembly for a file
+net/http/httpSession.cpp.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpSession.cpp.s
+.PHONY : net/http/httpSession.cpp.s
+
 net/http/httpclient_parser.o: net/http/httpclient_parser.cc.o
 
 .PHONY : net/http/httpclient_parser.o
@@ -287,32 +327,59 @@ net/http/httpclient_parser.cc.s:
 	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/httpclient_parser.cc.s
 .PHONY : net/http/httpclient_parser.cc.s
 
-net/httpSession.o: net/httpSession.cpp.o
+net/http/servlet.o: net/http/servlet.cpp.o
 
-.PHONY : net/httpSession.o
+.PHONY : net/http/servlet.o
 
 # target to build an object file
-net/httpSession.cpp.o:
-	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpSession.cpp.o
-.PHONY : net/httpSession.cpp.o
+net/http/servlet.cpp.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/servlet.cpp.o
+.PHONY : net/http/servlet.cpp.o
 
-net/httpSession.i: net/httpSession.cpp.i
+net/http/servlet.i: net/http/servlet.cpp.i
 
-.PHONY : net/httpSession.i
+.PHONY : net/http/servlet.i
 
 # target to preprocess a source file
-net/httpSession.cpp.i:
-	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpSession.cpp.i
-.PHONY : net/httpSession.cpp.i
+net/http/servlet.cpp.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/servlet.cpp.i
+.PHONY : net/http/servlet.cpp.i
 
-net/httpSession.s: net/httpSession.cpp.s
+net/http/servlet.s: net/http/servlet.cpp.s
 
-.PHONY : net/httpSession.s
+.PHONY : net/http/servlet.s
 
 # target to generate assembly for a file
-net/httpSession.cpp.s:
-	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpSession.cpp.s
-.PHONY : net/httpSession.cpp.s
+net/http/servlet.cpp.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/http/servlet.cpp.s
+.PHONY : net/http/servlet.cpp.s
+
+net/httpServer.o: net/httpServer.cpp.o
+
+.PHONY : net/httpServer.o
+
+# target to build an object file
+net/httpServer.cpp.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpServer.cpp.o
+.PHONY : net/httpServer.cpp.o
+
+net/httpServer.i: net/httpServer.cpp.i
+
+.PHONY : net/httpServer.i
+
+# target to preprocess a source file
+net/httpServer.cpp.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpServer.cpp.i
+.PHONY : net/httpServer.cpp.i
+
+net/httpServer.s: net/httpServer.cpp.s
+
+.PHONY : net/httpServer.s
+
+# target to generate assembly for a file
+net/httpServer.cpp.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/httpServer.cpp.s
+.PHONY : net/httpServer.cpp.s
 
 net/socket.o: net/socket.cpp.o
 
@@ -395,6 +462,33 @@ net/tcpServer.cpp.s:
 	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/net/tcpServer.cpp.s
 .PHONY : net/tcpServer.cpp.s
 
+tests/testHttpServer.o: tests/testHttpServer.cpp.o
+
+.PHONY : tests/testHttpServer.o
+
+# target to build an object file
+tests/testHttpServer.cpp.o:
+	$(MAKE) -f CMakeFiles/testHttpServer.dir/build.make CMakeFiles/testHttpServer.dir/tests/testHttpServer.cpp.o
+.PHONY : tests/testHttpServer.cpp.o
+
+tests/testHttpServer.i: tests/testHttpServer.cpp.i
+
+.PHONY : tests/testHttpServer.i
+
+# target to preprocess a source file
+tests/testHttpServer.cpp.i:
+	$(MAKE) -f CMakeFiles/testHttpServer.dir/build.make CMakeFiles/testHttpServer.dir/tests/testHttpServer.cpp.i
+.PHONY : tests/testHttpServer.cpp.i
+
+tests/testHttpServer.s: tests/testHttpServer.cpp.s
+
+.PHONY : tests/testHttpServer.s
+
+# target to generate assembly for a file
+tests/testHttpServer.cpp.s:
+	$(MAKE) -f CMakeFiles/testHttpServer.dir/build.make CMakeFiles/testHttpServer.dir/tests/testHttpServer.cpp.s
+.PHONY : tests/testHttpServer.cpp.s
+
 tests/testLibgo.o: tests/testLibgo.cpp.o
 
 .PHONY : tests/testLibgo.o
@@ -422,32 +516,32 @@ tests/testLibgo.cpp.s:
 	$(MAKE) -f CMakeFiles/testLibgo.dir/build.make CMakeFiles/testLibgo.dir/tests/testLibgo.cpp.s
 .PHONY : tests/testLibgo.cpp.s
 
-tests/testSocket.o: tests/testSocket.cpp.o
+tests/testTcpServer.o: tests/testTcpServer.cpp.o
 
-.PHONY : tests/testSocket.o
+.PHONY : tests/testTcpServer.o
 
 # target to build an object file
-tests/testSocket.cpp.o:
-	$(MAKE) -f CMakeFiles/testSocket.dir/build.make CMakeFiles/testSocket.dir/tests/testSocket.cpp.o
-.PHONY : tests/testSocket.cpp.o
+tests/testTcpServer.cpp.o:
+	$(MAKE) -f CMakeFiles/testTcpServer.dir/build.make CMakeFiles/testTcpServer.dir/tests/testTcpServer.cpp.o
+.PHONY : tests/testTcpServer.cpp.o
 
-tests/testSocket.i: tests/testSocket.cpp.i
+tests/testTcpServer.i: tests/testTcpServer.cpp.i
 
-.PHONY : tests/testSocket.i
+.PHONY : tests/testTcpServer.i
 
 # target to preprocess a source file
-tests/testSocket.cpp.i:
-	$(MAKE) -f CMakeFiles/testSocket.dir/build.make CMakeFiles/testSocket.dir/tests/testSocket.cpp.i
-.PHONY : tests/testSocket.cpp.i
+tests/testTcpServer.cpp.i:
+	$(MAKE) -f CMakeFiles/testTcpServer.dir/build.make CMakeFiles/testTcpServer.dir/tests/testTcpServer.cpp.i
+.PHONY : tests/testTcpServer.cpp.i
 
-tests/testSocket.s: tests/testSocket.cpp.s
+tests/testTcpServer.s: tests/testTcpServer.cpp.s
 
-.PHONY : tests/testSocket.s
+.PHONY : tests/testTcpServer.s
 
 # target to generate assembly for a file
-tests/testSocket.cpp.s:
-	$(MAKE) -f CMakeFiles/testSocket.dir/build.make CMakeFiles/testSocket.dir/tests/testSocket.cpp.s
-.PHONY : tests/testSocket.cpp.s
+tests/testTcpServer.cpp.s:
+	$(MAKE) -f CMakeFiles/testTcpServer.dir/build.make CMakeFiles/testTcpServer.dir/tests/testTcpServer.cpp.s
+.PHONY : tests/testTcpServer.cpp.s
 
 # Help Target
 help:
@@ -456,7 +550,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... testSocket"
+	@echo "... testHttpServer"
+	@echo "... testTcpServer"
 	@echo "... common"
 	@echo "... edit_cache"
 	@echo "... testLibgo"
@@ -472,12 +567,18 @@ help:
 	@echo "... net/http/httpResponse.o"
 	@echo "... net/http/httpResponse.i"
 	@echo "... net/http/httpResponse.s"
+	@echo "... net/http/httpSession.o"
+	@echo "... net/http/httpSession.i"
+	@echo "... net/http/httpSession.s"
 	@echo "... net/http/httpclient_parser.o"
 	@echo "... net/http/httpclient_parser.i"
 	@echo "... net/http/httpclient_parser.s"
-	@echo "... net/httpSession.o"
-	@echo "... net/httpSession.i"
-	@echo "... net/httpSession.s"
+	@echo "... net/http/servlet.o"
+	@echo "... net/http/servlet.i"
+	@echo "... net/http/servlet.s"
+	@echo "... net/httpServer.o"
+	@echo "... net/httpServer.i"
+	@echo "... net/httpServer.s"
 	@echo "... net/socket.o"
 	@echo "... net/socket.i"
 	@echo "... net/socket.s"
@@ -487,12 +588,15 @@ help:
 	@echo "... net/tcpServer.o"
 	@echo "... net/tcpServer.i"
 	@echo "... net/tcpServer.s"
+	@echo "... tests/testHttpServer.o"
+	@echo "... tests/testHttpServer.i"
+	@echo "... tests/testHttpServer.s"
 	@echo "... tests/testLibgo.o"
 	@echo "... tests/testLibgo.i"
 	@echo "... tests/testLibgo.s"
-	@echo "... tests/testSocket.o"
-	@echo "... tests/testSocket.i"
-	@echo "... tests/testSocket.s"
+	@echo "... tests/testTcpServer.o"
+	@echo "... tests/testTcpServer.i"
+	@echo "... tests/testTcpServer.s"
 .PHONY : help
 
 

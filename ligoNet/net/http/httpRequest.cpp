@@ -116,9 +116,12 @@ void HttpRequest::init()
     std::string conn = getHeader("connection");
     if(!conn.empty())
     {
-        if(strcasecmp(conn.c_str(), "keep-alive") == 0) {
+        if(0 == strcasecmp(conn.c_str(), "keep-alive"))
+        {
             m_close = false;
-        } else {
+        }
+        else
+        {
             m_close = true;
         }
     }

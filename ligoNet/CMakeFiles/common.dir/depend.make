@@ -638,18 +638,52 @@ CMakeFiles/common.dir/net/http/httpResponse.cpp.o: net/http/httpResponse.cpp
 CMakeFiles/common.dir/net/http/httpResponse.cpp.o: net/http/httpResponse.h
 CMakeFiles/common.dir/net/http/httpResponse.cpp.o: net/nonCopyable.h
 
+CMakeFiles/common.dir/net/http/httpSession.cpp.o: net/http/http11_common.h
+CMakeFiles/common.dir/net/http/httpSession.cpp.o: net/http/http11_parser.h
+CMakeFiles/common.dir/net/http/httpSession.cpp.o: net/http/httpCommon.h
+CMakeFiles/common.dir/net/http/httpSession.cpp.o: net/http/httpParse.h
+CMakeFiles/common.dir/net/http/httpSession.cpp.o: net/http/httpRequest.h
+CMakeFiles/common.dir/net/http/httpSession.cpp.o: net/http/httpResponse.h
+CMakeFiles/common.dir/net/http/httpSession.cpp.o: net/http/httpSession.cpp
+CMakeFiles/common.dir/net/http/httpSession.cpp.o: net/http/httpSession.h
+CMakeFiles/common.dir/net/http/httpSession.cpp.o: net/http/httpclient_parser.h
+CMakeFiles/common.dir/net/http/httpSession.cpp.o: net/nonCopyable.h
+CMakeFiles/common.dir/net/http/httpSession.cpp.o: net/socket.h
+CMakeFiles/common.dir/net/http/httpSession.cpp.o: net/tcpConn.h
+
 CMakeFiles/common.dir/net/http/httpclient_parser.cc.o: net/http/http11_common.h
 CMakeFiles/common.dir/net/http/httpclient_parser.cc.o: net/http/httpclient_parser.cc
 CMakeFiles/common.dir/net/http/httpclient_parser.cc.o: net/http/httpclient_parser.h
 
-CMakeFiles/common.dir/net/httpSession.cpp.o: net/http/httpCommon.h
-CMakeFiles/common.dir/net/httpSession.cpp.o: net/http/httpRequest.h
-CMakeFiles/common.dir/net/httpSession.cpp.o: net/http/httpResponse.h
-CMakeFiles/common.dir/net/httpSession.cpp.o: net/httpSession.cpp
-CMakeFiles/common.dir/net/httpSession.cpp.o: net/httpSession.h
-CMakeFiles/common.dir/net/httpSession.cpp.o: net/nonCopyable.h
-CMakeFiles/common.dir/net/httpSession.cpp.o: net/socket.h
-CMakeFiles/common.dir/net/httpSession.cpp.o: net/tcpConn.h
+CMakeFiles/common.dir/net/http/servlet.cpp.o: net/http/http11_common.h
+CMakeFiles/common.dir/net/http/servlet.cpp.o: net/http/http11_parser.h
+CMakeFiles/common.dir/net/http/servlet.cpp.o: net/http/httpCommon.h
+CMakeFiles/common.dir/net/http/servlet.cpp.o: net/http/httpParse.h
+CMakeFiles/common.dir/net/http/servlet.cpp.o: net/http/httpRequest.h
+CMakeFiles/common.dir/net/http/servlet.cpp.o: net/http/httpResponse.h
+CMakeFiles/common.dir/net/http/servlet.cpp.o: net/http/httpSession.h
+CMakeFiles/common.dir/net/http/servlet.cpp.o: net/http/httpclient_parser.h
+CMakeFiles/common.dir/net/http/servlet.cpp.o: net/http/servlet.cpp
+CMakeFiles/common.dir/net/http/servlet.cpp.o: net/http/servlet.h
+CMakeFiles/common.dir/net/http/servlet.cpp.o: net/nonCopyable.h
+CMakeFiles/common.dir/net/http/servlet.cpp.o: net/socket.h
+CMakeFiles/common.dir/net/http/servlet.cpp.o: net/tcpConn.h
+
+CMakeFiles/common.dir/net/httpServer.cpp.o: net/http/http11_common.h
+CMakeFiles/common.dir/net/httpServer.cpp.o: net/http/http11_parser.h
+CMakeFiles/common.dir/net/httpServer.cpp.o: net/http/httpCommon.h
+CMakeFiles/common.dir/net/httpServer.cpp.o: net/http/httpParse.h
+CMakeFiles/common.dir/net/httpServer.cpp.o: net/http/httpRequest.h
+CMakeFiles/common.dir/net/httpServer.cpp.o: net/http/httpResponse.h
+CMakeFiles/common.dir/net/httpServer.cpp.o: net/http/httpSession.h
+CMakeFiles/common.dir/net/httpServer.cpp.o: net/http/httpclient_parser.h
+CMakeFiles/common.dir/net/httpServer.cpp.o: net/http/servlet.h
+CMakeFiles/common.dir/net/httpServer.cpp.o: net/httpServer.cpp
+CMakeFiles/common.dir/net/httpServer.cpp.o: net/httpServer.h
+CMakeFiles/common.dir/net/httpServer.cpp.o: net/nonCopyable.h
+CMakeFiles/common.dir/net/httpServer.cpp.o: net/socket.h
+CMakeFiles/common.dir/net/httpServer.cpp.o: net/tcpConn.h
+CMakeFiles/common.dir/net/httpServer.cpp.o: net/tcpServer.h
 
 CMakeFiles/common.dir/net/socket.cpp.o: net/nonCopyable.h
 CMakeFiles/common.dir/net/socket.cpp.o: net/socket.cpp
@@ -660,6 +694,9 @@ CMakeFiles/common.dir/net/tcpConn.cpp.o: net/socket.h
 CMakeFiles/common.dir/net/tcpConn.cpp.o: net/tcpConn.cpp
 CMakeFiles/common.dir/net/tcpConn.cpp.o: net/tcpConn.h
 
+CMakeFiles/common.dir/net/tcpServer.cpp.o: net/nonCopyable.h
+CMakeFiles/common.dir/net/tcpServer.cpp.o: net/socket.h
+CMakeFiles/common.dir/net/tcpServer.cpp.o: net/tcpConn.h
 CMakeFiles/common.dir/net/tcpServer.cpp.o: net/tcpServer.cpp
 CMakeFiles/common.dir/net/tcpServer.cpp.o: net/tcpServer.h
 

@@ -15,14 +15,32 @@ net/http/httpRequest.h
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpRequest.h
 net/http/httpResponse.h
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpResponse.h
-net/httpSession.h
-/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpSession.h
+net/http/httpSession.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpSession.h
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/http11_common.h
+sys/types.h
+-
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/http11_parser.h
+http11_common.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/http11_common.h
 
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpCommon.h
 string
 -
 string.h
 -
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpParse.h
+httpRequest.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpRequest.h
+httpResponse.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpResponse.h
+http11_parser.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/http11_parser.h
+httpclient_parser.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpclient_parser.h
 
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpRequest.h
 ../nonCopyable.h
@@ -46,13 +64,15 @@ map
 vector
 -
 
-/home/wangk/code/cpp/unixNetwork/ligoNet/net/httpSession.h
-tcpConn.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpSession.h
+../tcpConn.h
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.h
-http/httpRequest.h
-/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpRequest.h
-http/httpResponse.h
-/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpResponse.h
+httpParse.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpParse.h
+
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/httpclient_parser.h
+http11_common.h
+/home/wangk/code/cpp/unixNetwork/ligoNet/net/http/http11_common.h
 
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/nonCopyable.h
 
