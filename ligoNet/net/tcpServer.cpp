@@ -44,9 +44,20 @@ void TCPServer::startAccept(Socket::Ptr sock)
             
             if (clientTcpConn)
             {
+                // std::cout << "accept a  new connection" << std::endl;
                 go std::bind(&TCPServer::handleClient, shared_from_this(), clientTcpConn);
             }
+            else
+            {
+                std::cout << "accpet a bad tcp connection" << std::endl;   
+            }
+            
         }
+        else
+        {
+            std::cout << "accpet a bad socket" << std::endl;
+        }
+        
 
     }
     

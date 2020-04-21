@@ -3,8 +3,8 @@ PROJECT(net)
 
 SET(CMAKE_CXX_COMPILER "/usr/bin/clang++")
 SET(CMAKE_VERBOSE_MAKEFILE ON)
-# 
-SET(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -O0 -g -fsanitize=address -std=c++11 -Wall -Wno-builtin-macro-redefined -Wno-deprecated -Werror -Wno-unused-function") 
+# -g -fsanitize=address 
+SET(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -O2 -std=c++11 -Wall -Wno-builtin-macro-redefined -Wno-deprecated -Werror -Wno-unused-function") 
 SET(LIB_SRC
     net/socket.cpp
     net/tcpConn.cpp
@@ -20,9 +20,10 @@ SET(LIB_SRC
     net/http/servlet.cpp
 )
 SET(LIB_LIB
+    common
     libgo
     dl
-    common
+    
     boost_program_options
     pthread
 )

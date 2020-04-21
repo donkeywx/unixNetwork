@@ -72,6 +72,11 @@ int Socket::bind(const struct sockaddr_in *addr)
 Socket::Ptr Socket::accept()
 {
     int acceptedSock = ::accept(m_sock, nullptr, nullptr);
+    if (-1 == acceptedSock)
+    {
+        std::cout << "accept error: " << strerror(errno) << std::endl;
+        return nullptr;
+    }
     return createAcceptedSocket(acceptedSock, m_domain,
         this->m_type, this->m_protocol);
 }
@@ -79,6 +84,10 @@ Socket::Ptr Socket::accept()
 Socket::Ptr Socket::createAcceptedSocket(int acceptedSock, Domain domain, Type type, int protocol)
 {
     Socket::Ptr sock(new Socket(domain, type, protocol));
+
+
+    int val = 1;
+    setsockopt(sock->m_sock, SOL_SOCKET, SO_REUSEADDR, &val, (socklen_t)sizeof(int));
     sock->setSock(acceptedSock);
     sock->setConnected(true);
     return sock;
@@ -125,9 +134,10 @@ int Socket::close()
         return 0;
     }
     setConnected(false);
-    if (INVALID_SOCKET == m_sock)
+    if (INVALID_SOCKET != m_sock)
     {
         ::close(m_sock);
+        // std::cout << "close socket" << std::endl;
         m_sock = INVALID_SOCKET;
     }
     return 0;
