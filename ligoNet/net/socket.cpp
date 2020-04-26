@@ -14,12 +14,14 @@ Socket::Socket(Domain domain, Type type, int protocol)
 }
 Socket::~Socket()
 {
-
+    close();
 }
 
 int Socket::listen(const char* serverIp, uint16_t serverPort, int backlog)
 {
     m_sock = ::socket(m_domain, m_type, m_protocol);
+    int val = 1;
+    setsockopt(m_sock, SOL_SOCKET, SO_REUSEADDR, &val, (socklen_t)sizeof(int));
     if (INVALID_SOCKET == m_sock)
     {
         std::cout << "failed to create socket, " << strerror(errno) << std::endl;
@@ -71,12 +73,19 @@ int Socket::bind(const struct sockaddr_in *addr)
 
 Socket::Ptr Socket::accept()
 {
-    int acceptedSock = ::accept(m_sock, nullptr, nullptr);
+    sockaddr_in client;
+    socklen_t len = sizeof(sockaddr_in);
+    int acceptedSock = ::accept(m_sock, (sockaddr*)& client, &len);
     if (-1 == acceptedSock)
     {
-        std::cout << "accept error: " << strerror(errno) << std::endl;
+        std::cout << "accept error: " << m_sock << " " << strerror(errno) << std::endl;
         return nullptr;
     }
+    else
+    {
+        std::cout << "accept a new socket: " << acceptedSock << std::endl;
+    }
+    
     return createAcceptedSocket(acceptedSock, m_domain,
         this->m_type, this->m_protocol);
 }

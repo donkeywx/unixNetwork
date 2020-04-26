@@ -34,7 +34,7 @@ public:
     Socket(Domain domain, Type type, int protocol = 0);
     ~Socket();
 
-    int listen(const char* serverIp, uint16_t serverPort, int backlog = 10);
+    int listen(const char* serverIp, uint16_t serverPort, int backlog = 100);
     Socket::Ptr accept();
     int connect(const char* remoteIp, uint16_t remotePort);
     int send(const void *buf, size_t len, int flags);

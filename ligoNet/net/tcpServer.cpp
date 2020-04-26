@@ -11,7 +11,10 @@ TCPServer::TCPServer()
 }
 TCPServer::~TCPServer()
 {
-
+    if (m_listSock)
+    {
+        m_listSock->close();
+    }
 }
 int TCPServer::listen(const char* ip, uint16_t port)
 {
@@ -30,7 +33,7 @@ void TCPServer::start()
     }
     m_stop = false;
     go std::bind(&TCPServer::startAccept, shared_from_this(), m_listSock);
-    co_sched.Start();
+    co_sched.Start(0, 100);
 }
 
 void TCPServer::startAccept(Socket::Ptr sock)
@@ -41,7 +44,7 @@ void TCPServer::startAccept(Socket::Ptr sock)
         if (clientSock)
         {
             TCPConn::Ptr clientTcpConn = std::make_shared<TCPConn>(clientSock);
-            
+
             if (clientTcpConn)
             {
                 // std::cout << "accept a  new connection" << std::endl;
@@ -57,8 +60,6 @@ void TCPServer::startAccept(Socket::Ptr sock)
         {
             std::cout << "accpet a bad socket" << std::endl;
         }
-        
-
     }
     
 }

@@ -12,7 +12,7 @@ public:
     typedef std::shared_ptr<TCPServer> Ptr;
 
     TCPServer();
-    ~TCPServer();
+    virtual ~TCPServer();
     int listen(const char* ip, uint16_t port);
     void start();
     void stop();

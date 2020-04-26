@@ -11,7 +11,7 @@ class HttpServer: public TCPServer
 public:
     typedef std::shared_ptr<HttpServer> Ptr;
     HttpServer();
-    ~HttpServer();
+    virtual ~HttpServer();
     virtual void handleClient(TCPConn::Ptr clientTcpConn);
 private:
     Servlet::Ptr servlet;
