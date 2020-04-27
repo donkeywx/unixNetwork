@@ -107,6 +107,8 @@ socket.h
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.h
 
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpServer.h
+libgo/coroutine.h
+-
 tcpConn.h
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.h
 

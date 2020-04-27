@@ -1,7 +1,7 @@
 #include "socket.h"
 #include <arpa/inet.h>
 #include <iostream>
-
+#include <netinet/tcp.h>
 
 namespace donkey
 {
@@ -52,7 +52,7 @@ void Socket::setAddr(const char* ip, uint16_t port, sockaddr_in& addr)
     memset(&addr, 0, sizeof(sockaddr_in));
 	addr.sin_family = AF_INET;
 	addr.sin_port = htons(port);
-	addr.sin_addr.s_addr = inet_addr(ip);
+	addr.sin_addr.s_addr = INADDR_ANY;
 	if (addr.sin_addr.s_addr == INADDR_NONE)
 	{
 		hostent* host = gethostbyname(ip);
@@ -81,10 +81,6 @@ Socket::Ptr Socket::accept()
         std::cout << "accept error: " << m_sock << " " << strerror(errno) << std::endl;
         return nullptr;
     }
-    else
-    {
-        std::cout << "accept a new socket: " << acceptedSock << std::endl;
-    }
     
     return createAcceptedSocket(acceptedSock, m_domain,
         this->m_type, this->m_protocol);
@@ -96,8 +92,18 @@ Socket::Ptr Socket::createAcceptedSocket(int acceptedSock, Domain domain, Type t
 
 
     int val = 1;
-    setsockopt(sock->m_sock, SOL_SOCKET, SO_REUSEADDR, &val, (socklen_t)sizeof(int));
+
     sock->setSock(acceptedSock);
+    setsockopt(sock->m_sock, SOL_SOCKET, SO_REUSEADDR, &val, (socklen_t)sizeof(int));
+    if (-1 == setsockopt(sock->m_sock, IPPROTO_TCP, TCP_NODELAY, &val, (socklen_t)sizeof(int)))
+    {
+        std::cout << "no delay error: " << strerror(errno) << std::endl;
+    }
+    val = 65535 * 10;
+    if (-1 == setsockopt(sock->m_sock, SOL_SOCKET, SO_SNDBUF, &val, (socklen_t)sizeof(int)))
+    {
+        std::cout << "no delay error: " << strerror(errno) << std::endl;
+    }
     sock->setConnected(true);
     return sock;
 }

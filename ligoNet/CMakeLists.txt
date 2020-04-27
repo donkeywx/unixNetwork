@@ -4,7 +4,7 @@ PROJECT(net)
 SET(CMAKE_CXX_COMPILER "/usr/bin/clang++")
 SET(CMAKE_VERBOSE_MAKEFILE ON)
 # -g -fsanitize=address 
-SET(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -g -O2 -std=c++11 -Wall -Wno-builtin-macro-redefined -Wno-deprecated -Werror -Wno-unused-function") 
+SET(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -O3 -std=c++11 -Wall -Wno-builtin-macro-redefined -Wno-deprecated -Werror -Wno-unused-function") 
 SET(LIB_SRC
     net/socket.cpp
     net/tcpConn.cpp

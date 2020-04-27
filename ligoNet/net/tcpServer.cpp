@@ -1,6 +1,7 @@
 #include "tcpServer.h"
 #include <libgo/coroutine.h>
 #include <iostream>
+#include <thread>
 namespace donkey
 {
 TCPServer::TCPServer()
@@ -32,8 +33,17 @@ void TCPServer::start()
         return ;
     }
     m_stop = false;
+
     go std::bind(&TCPServer::startAccept, shared_from_this(), m_listSock);
-    co_sched.Start(0, 100);
+    std::thread t2([]{co_sched.Start(2); });
+    t2.detach();
+
+    sched = co::Scheduler::Create();
+    go co_scheduler(sched) []{
+        printf("run in my scheduler.\n");
+    };
+    sched->Start(0, 10); 
+    
 }
 
 void TCPServer::startAccept(Socket::Ptr sock)
@@ -48,7 +58,7 @@ void TCPServer::startAccept(Socket::Ptr sock)
             if (clientTcpConn)
             {
                 // std::cout << "accept a  new connection" << std::endl;
-                go std::bind(&TCPServer::handleClient, shared_from_this(), clientTcpConn);
+                go co_scheduler(sched) std::bind(&TCPServer::handleClient, shared_from_this(), clientTcpConn);
             }
             else
             {

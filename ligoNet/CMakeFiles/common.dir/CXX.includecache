@@ -155,6 +155,8 @@ arpa/inet.h
 -
 iostream
 -
+netinet/tcp.h
+-
 
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/socket.h
 nonCopyable.h
@@ -179,8 +181,12 @@ libgo/coroutine.h
 -
 iostream
 -
+thread
+-
 
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpServer.h
+libgo/coroutine.h
+-
 tcpConn.h
 /home/wangk/code/cpp/unixNetwork/ligoNet/net/tcpConn.h
 
